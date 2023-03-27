@@ -1,0 +1,16 @@
+.contenedorDeInformacion {
+    display: flex;
+    flex-flow: column;
+    border: solid 1px black;
+    justify-content: center;
+    text-align: center;
+    width: 200px     
+}
+
+.cuadroDeInformacion_title {
+    text-align: center;
+    text-decoration:underline;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}

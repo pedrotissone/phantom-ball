@@ -1,0 +1,13 @@
+.headerDiv {
+    width: 100%;
+    background-color: black;
+    border: solid 1px white;
+}
+
+.headerTitle {
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-family: 'Rubik Iso', cursive;
+    font-size: 50px
+}

@@ -1,0 +1,17 @@
+.ranking_ol { 
+    width: auto;  
+    height: 300px;
+    padding: 30px;   
+    border: solid 1px black;    
+}
+
+.ranking_title {    
+    margin: auto;
+    padding: 5px;
+    text-decoration: underline;    
+}
+
+.ranking_li {
+    font-weight: bold;
+    color: grey;
+}

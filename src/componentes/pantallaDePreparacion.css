@@ -1,0 +1,18 @@
+.pantallaDePreparacion_contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: burlywood;    
+    height: 200px;
+}
+
+.pantallaDePreparacion_button {
+    width: 150px;
+    height: 50px;
+    align-self: center;    
+}
+
+.pantallaDePreparacion_cuadroDeInformacion {
+    background-color: gainsboro;
+    align-self: flex-start;
+}
