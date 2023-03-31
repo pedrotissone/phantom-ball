@@ -1,16 +1,56 @@
 .phantomBall_contenedor {
     display: flex;
+    flex-direction: column;
     width: 100vw;    
     height: 100vh;
     background-color: whitesmoke;
 }
 
-.phantomBall_start {
+.phantomball_divInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.phantomball_count {
     width: fit-content;
-    height: fit-content;  
+    border: solid 3px black;
+    padding: 4px;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.phantomball_puntaje {
+    width: fit-content;
+    border: solid 3px black;
+    padding: 4px;
+    font-weight: bolder;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.phantomBall_time {
+    width: fit-content;
+    border: solid 3px black;
+    padding: 4px;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.phantomball_divMostrarBoton {
+    display: flex;
+    align-self: center;
 }
 
 .phantomBall_mostrarBoton {
-    margin: auto;
-    z-index: 2;
+    position: absolute;
+    top: 50vh;
+    right: 45vw;
+}
+
+.phantomBall_start {
+    width: fit-content;
+    height: fit-content;
+    z-index: 2;  
 }
