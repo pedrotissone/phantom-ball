@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import { myContext } from "../context/myContext";
 import { Link } from "react-router-dom"
 import { crearDocumento } from "../services/firestore";
+import Swal from "sweetalert2";
 import "./phantomBall.css"
 
 function PhantomBall() {
@@ -12,15 +13,15 @@ function PhantomBall() {
 	const { nombreDeUsuario, puntaje } = useContext(myContext)
 
 
-	const [color, setColor] = useState("black")
+	const [color, setColor] = useState("red")
 
 	function changeColor() {
-		if (color == "black") {
-			setColor("red")
-		} else if (color == "red") {
-			setColor("blue")
+		if (color == "red") {
+			setColor("yellow")
+		} else if (color == "yellow") {
+			setColor("white")
 		} else {
-			setColor("black")
+			setColor("red")
 		}
 	}
 
@@ -40,11 +41,11 @@ function PhantomBall() {
 		left: 750,
 	})
 
-	const [timeLeft, setTimeLeft] = useState(5)
+	const [timeLeft, setTimeLeft] = useState(20)
 
 	const [mostrarBoton, setMostrarBoton] = useState(false)
 
-	const [count, setCount] = useState(5)
+	const [count, setCount] = useState(20)
 											
 
 	useEffect(() => {
@@ -53,7 +54,14 @@ function PhantomBall() {
 			if (timeLeft > 0) {
 				setTimeLeft(timeLeft - 1)
 			} else {				
-				alert("Se acabó el tiempo, el juego terminó")
+				Swal.fire({
+					titleText: "El juego terminó, ya no tiene más clicks",
+					icon: "warning",
+					iconColor: "red",
+					background: "#17202A",
+					color: "#fff",					
+					confirmButtonColor:"#17202A",
+					})
 				setMostrarBoton(true)
 			}	
 		}, 1000)
@@ -77,7 +85,7 @@ function PhantomBall() {
 	setTimeout(() => {
 		clearInterval(intervalo);			
 		setMostrarBoton(true)		
-	}, 5000);
+	}, 20000);
 
 	}, [])
 	
@@ -86,12 +94,19 @@ function PhantomBall() {
 
 	async function handlecount(e) {		
 		if ((e.target.tagName == "DIV" && count > 0 && mostrarBoton == false) || (e.target.tagName == "circle" && count > 0 && mostrarBoton == false) || (e.target.tagName == "P" && count > 0 && mostrarBoton == false) ){
-			setCount(count - 1)
+			setCount(count - 1)			
 		} else if (e.target.tagName == "BUTTON") {
 			handleDocCreation()
 			console.log("soy button")
 		} else {
-			alert("El juego terminó, ya no tiene mas clicks!")
+			Swal.fire({
+				titleText: "El juego terminó, ya no tiene más clicks",
+				icon: "warning",
+				iconColor: "red",
+				background: "#17202A",
+				color: "#fff",					
+				confirmButtonColor:"#17202A",
+				})
 		}
 	}
 

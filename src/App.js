@@ -1,7 +1,7 @@
 import "./App.css";
 import InputFormulario from "./componentes/InputFormulario";
 import "./App.css"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import PhantomBall from "./componentes/PhantomBall";
 import Header from "./componentes/Header";
 import { MyContextProvider } from "./context/myContext";
@@ -19,9 +19,9 @@ function App() {
           <Route path="/" element={
             <>
             <Header />
-            <div className="app_contenedor">
+            
               <InputFormulario />
-            </div> 
+            
             </>}
           />
 
@@ -39,7 +39,13 @@ function App() {
               <div className="divDeResultados">
               <CuadroDeInformacion/>
               <Ranking/>
-              </div>              
+              </div>
+              <div className="buttonDeResultado_div">
+              <Link to={"/"}>
+              <button className="buttonDeResultado">Volver a inicio</button>               
+              </Link>  
+              </div>
+                         
             </>            
           }/>
 

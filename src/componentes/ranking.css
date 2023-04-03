@@ -1,17 +1,23 @@
-.ranking_ol { 
-    width: auto;  
-    height: 300px;
-    padding: 30px;   
-    border: solid 1px black;    
+.ranking_div {
+    display: flex;
+    min-width: 200px;  
 }
 
-.ranking_title {    
-    margin: auto;
-    padding: 5px;
-    text-decoration: underline;    
+.ranking_ul {   
+    list-style: none;
+    border: solid 1px white;
+    background-color: black;   
+}
+
+.ranking_title {
+    text-align: center;    
+    padding: 10px;
+    text-decoration: underline;
+    color: red;
+    font-weight: normal;
 }
 
 .ranking_li {
-    font-weight: bold;
-    color: grey;
+    color: white;
+    padding: 15px;
 }

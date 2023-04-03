@@ -13,9 +13,9 @@ function CuadroDeInformacion() {
 		<>
 		<div className="contenedorDeInformacion">
 			<p className="cuadroDeInformacion_title">Nombre de Usuario</p>
-			<p>{nombreDeUsuario}</p>
+			<p className="cuadroDeInformacion_usuario">{nombreDeUsuario}</p>
 			<p className="cuadroDeInformacion_title">Puntos</p>
-			<p>{puntaje}</p>	
+			<p className="cuadroDeInformacion_puntaje">{puntaje}</p>	
 		</div>		
 		</>
     

@@ -2,15 +2,37 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Crete Round', serif;
+    color: white;
 }
 
-.app_contenedor {
-    width: 1510px;
-    height: 640px;
-    background-color: rgb(187, 162, 162);
+body {
+    background-color: black;
 }
+
 
 .divDeResultados {
     display: flex;
     justify-content: space-between;
+}
+.buttonDeResultado_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.buttonDeResultado {  
+    height: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: solid 2px white;
+    font-family: 'Crete Round', serif;
+    font-weight: bold;
+    font-size: larger;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.568);
+    font-style: italic;    
+}
+
+.buttonDeResultado:hover {
+    background-color: rgb(239 238 87); 
 }

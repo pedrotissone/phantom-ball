@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100vw;    
     height: 100vh;
-    background-color: whitesmoke;
+    background-color: black;
 }
 
 .phantomball_divInfo {
@@ -14,27 +14,27 @@
 
 .phantomball_count {
     width: fit-content;
-    border: solid 3px black;
-    padding: 4px;
-    font-weight: bolder;
+    border: solid 3px white;
+    color: white;
+    padding: 4px;    
     margin-left: 20px;
     margin-top: 10px;
 }
 
 .phantomball_puntaje {
     width: fit-content;
-    border: solid 3px black;
-    padding: 4px;
-    font-weight: bolder;
+    border: solid 3px white;
+    color: white;
+    padding: 4px;    
     margin-right: 20px;
     margin-top: 10px;
 }
 
 .phantomBall_time {
     width: fit-content;
-    border: solid 3px black;
+    border: solid 3px white;
+    color: white;
     padding: 4px;
-    font-weight: bolder;
     margin-top: 10px;
 }
 
@@ -43,10 +43,24 @@
     align-self: center;
 }
 
-.phantomBall_mostrarBoton {
-    position: absolute;
-    top: 50vh;
-    right: 45vw;
+.phantomBall_mostrarBoton {   
+    margin: auto;
+    margin-top: 100px;
+    align-self: center;
+    height: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: solid 2px white;
+    font-family: 'Crete Round', serif;
+    font-weight: bold;
+    font-size: larger;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.568);
+    font-style: italic; 
+}
+
+.phantomBall_mostrarBoton:hover {
+    background-color: rgb(239 238 87); 
 }
 
 .phantomBall_start {

@@ -2,6 +2,8 @@ import React from "react";
 import { useContext } from "react";
 import { myContext } from "../context/myContext";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import "./inputFormulario.css"
 
 
 function InputFormulario( ) {
@@ -18,7 +20,7 @@ function InputFormulario( ) {
 	
 
 	return (
-	<>
+	<div className="inputFormulario_div">
 		<form className="inputFormulario_contenedor" onSubmit={formHandler}>
 
 			<input
@@ -35,15 +37,17 @@ function InputFormulario( ) {
 				<Link to={"/pantallaDePreparacion"}>
 					<button className="inputFormulario_button">Confirmar</button>	
 				</Link>
-				: <button className="inputFormulario_button" onClick={() => alert("escriba un nombre valido")}>Confirmar</button>	
-				
-
-			}
-			
-					
-		</form>		
-
-	</>
+				: <button className="inputFormulario_button" onClick={() => Swal.fire({
+					titleText: "Debe ingresar un nombre de usuario",
+					icon: "warning",
+					background: "#17202A",
+					color: "#fff",
+					iconColor:"red",
+					confirmButtonColor:"red",
+					})}>Confirmar</button>
+			}					
+		</form>	
+	</div>
 	);
 }
 
