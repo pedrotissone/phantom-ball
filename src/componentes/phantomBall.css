@@ -64,15 +64,18 @@
 }
 
 .phantomBall_start {
-    width: fit-content;
-    height: fit-content;
-    z-index: 2;  
+    z-index: 2;    
+}
+
+.phantomBall_invert {
+    z-index: 2;
+    filter: invert();
 }
 
 /* MEDIA QUERIES */
 
 @media (max-width:330px) {
-    .phantomBall_start {
+    .phantomBall_start, .phantomBall_invert {
         width: 10px;
         height: 10px;
     }
