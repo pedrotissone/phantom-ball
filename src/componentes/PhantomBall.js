@@ -68,7 +68,7 @@ function PhantomBall() {
 	} else {
 		setTimeLeft(0)
 		setMostrarBoton(true)
-	}	},[timeLeft])
+	}}, [timeLeft])
 
 
 	useEffect(() => {		
@@ -93,11 +93,10 @@ function PhantomBall() {
 
 
 	async function handlecount(e) {		
-		if ((e.target.tagName == "DIV" && count > 0 && mostrarBoton == false) || (e.target.tagName == "circle" && count > 0 && mostrarBoton == false) || (e.target.tagName == "P" && count > 0 && mostrarBoton == false) ){
+		if ( count > 0 && mostrarBoton == false) {
 			setCount(count - 1)			
 		} else if (e.target.tagName == "BUTTON") {
-			handleDocCreation()
-			console.log("soy button")
+			handleDocCreation()			
 		} else {
 			Swal.fire({
 				titleText: "El juego terminó, ya no tiene más clicks",
