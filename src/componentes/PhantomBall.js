@@ -46,46 +46,46 @@ function PhantomBall() {
 	const [count, setCount] = useState(20)
 											
 
-	// useEffect(() => {
-	// 	if (count > 0) {
-	// 	const timer = setTimeout(() => {
-	// 		if (timeLeft > 0) {
-	// 			setTimeLeft(timeLeft - 1)
-	// 		} else {				
-	// 			Swal.fire({
-	// 				titleText: "El juego terminó, ya no tiene más clicks",
-	// 				icon: "warning",
-	// 				iconColor: "red",
-	// 				background: "#17202A",
-	// 				color: "#fff",					
-	// 				confirmButtonColor:"#17202A",
-	// 				})
-	// 			setMostrarBoton(true)
-	// 		}	
-	// 	}, 1000)
-	// } else {
-	// 	setTimeLeft(0)
-	// 	setMostrarBoton(true)
-	// }}, [timeLeft])
+	useEffect(() => {
+		if (count > 0) {
+		const timer = setTimeout(() => {
+			if (timeLeft > 0) {
+				setTimeLeft(timeLeft - 1)
+			} else {				
+				Swal.fire({
+					titleText: "El juego terminó, ya no tiene más clicks",
+					icon: "warning",
+					iconColor: "red",
+					background: "#17202A",
+					color: "#fff",					
+					confirmButtonColor:"#17202A",
+					})
+				setMostrarBoton(true)
+			}	
+		}, 1000)
+	} else {
+		setTimeLeft(0)
+		setMostrarBoton(true)
+	}}, [timeLeft])
 
 
-	// useEffect(() => {		
-	// 	  const intervalo = setInterval(() => {					
+	useEffect(() => {		
+		  const intervalo = setInterval(() => {					
 
-	// 		setPosicionTotal({
-	// 		top: Math.floor(Math.random() * (window.innerHeight - 45)),
-	// 		right: Math.floor(Math.random() * (window.innerWidth - 45)),
-	// 		bottom: Math.floor(Math.random() * (window.innerHeight - 45)),
-	// 		left: Math.floor(Math.random() * (window.innerWidth - 45)),
-	// 		});
-	// 	}, 1000); 	
+			setPosicionTotal({
+			top: Math.floor(Math.random() * (window.innerHeight - 45)),
+			right: Math.floor(Math.random() * (window.innerWidth - 45)),
+			bottom: Math.floor(Math.random() * (window.innerHeight - 45)),
+			left: Math.floor(Math.random() * (window.innerWidth - 45)),
+			});
+		}, 1000); 	
 
-	// setTimeout(() => {
-	// 	clearInterval(intervalo);			
-	// 	setMostrarBoton(true)		
-	// }, 20000);
+	setTimeout(() => {
+		clearInterval(intervalo);			
+		setMostrarBoton(true)		
+	}, 20000);
 
-	// return () => clearInterval(intervalo);}, []);	
+	return () => clearInterval(intervalo);}, []);	
 	
 
 
