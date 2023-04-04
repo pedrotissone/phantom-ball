@@ -36,7 +36,7 @@ function PhantomBall() {
 
 	const [posicionTotal, setPosicionTotal] = useState({
 		top: 350,
-		rigth: 0,
+		right: 0,
 		bottom: 0,
 		left: 750,
 	})
@@ -76,18 +76,18 @@ function PhantomBall() {
 
 			setPosicionTotal({
 			top: Math.floor(Math.random() * (window.innerHeight - 45)),
-			rigth: Math.floor(Math.random() * (window.innerWidth - 45)),
+			right: Math.floor(Math.random() * (window.innerWidth - 45)),
 			bottom: Math.floor(Math.random() * (window.innerHeight - 45)),
 			left: Math.floor(Math.random() * (window.innerWidth - 45)),
 			});
-		}, 1500); 	
+		}, 1000); 	
 
 	setTimeout(() => {
 		clearInterval(intervalo);			
 		setMostrarBoton(true)		
 	}, 20000);
 
-	}, [])
+	return () => clearInterval(intervalo);}, []);
 	
 	// return () => clearInterval(intervalo);}, []); //Effect cleanup solo sirve para rendimiento por eso lo saque
 
