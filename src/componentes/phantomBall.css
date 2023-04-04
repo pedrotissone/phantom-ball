@@ -68,3 +68,16 @@
     height: fit-content;
     z-index: 2;  
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width:330px) {
+    .phantomBall_start {
+        width: 10px;
+        height: 10px;
+    }
+
+    .phantomball_count, .phantomBall_time, .phantomball_puntaje {
+        font-size: smaller;
+    }
+}

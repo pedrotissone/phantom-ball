@@ -12,3 +12,9 @@
     font-style: italic;
     font-size: 50px
 }
+
+@media (max-width: 300px) {
+    .headerTitle {
+        font-size: 35px;
+    }
+}

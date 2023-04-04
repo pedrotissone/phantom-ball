@@ -38,7 +38,7 @@ function PhantomBall() {
 		top: 350,
 		right: 0,
 		bottom: 0,
-		left: 750,
+		left: 150,
 	})
 
 	const [timeLeft, setTimeLeft] = useState(20)
@@ -87,9 +87,8 @@ function PhantomBall() {
 		setMostrarBoton(true)		
 	}, 20000);
 
-	return () => clearInterval(intervalo);}, []);
+	return () => clearInterval(intervalo);}, []);	
 	
-	// return () => clearInterval(intervalo);}, []); //Effect cleanup solo sirve para rendimiento por eso lo saque
 
 
 	async function handlecount(e) {		
