@@ -23,12 +23,17 @@ export function MyContextProvider(props) { //Creamos un COMPONENTE,  que va a se
 		setPuntaje(0)
 	}
 
+	function limparPuntaje() {
+		setPuntaje(0)
+	}
+
 	const value = {
 		nombreDeUsuario,
 		onChangeHandler,
 		puntaje,
 		sumarPuntos,
-		limpiarEstado		
+		limpiarEstado,
+		limparPuntaje		
 	}
 
 return(

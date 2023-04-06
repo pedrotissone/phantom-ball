@@ -12,6 +12,9 @@ function PhantomBall() {
 	
 	const { nombreDeUsuario, puntaje } = useContext(myContext)
 
+	const limpar = useContext(myContext).limparPuntaje
+
+
 
 	const [className, setClassName] = useState("phantomBall_start")
 
@@ -69,7 +72,8 @@ function PhantomBall() {
 	}}, [timeLeft])
 
 
-	useEffect(() => {		
+	useEffect(() => {
+		  limpar()			
 		  const intervalo = setInterval(() => {					
 
 			setPosicionTotal({
