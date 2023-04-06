@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useContext } from "react";
 import { myContext } from "../context/myContext";
 import { Link } from "react-router-dom";
@@ -11,11 +11,16 @@ function InputFormulario( ) {
 	//Version Sugar = const { onChangeHandler } = useContext(myContext)
 	const onChangeHandler = useContext(myContext).onChangeHandler
 	const { nombreDeUsuario }  = useContext(myContext)
+	const limpiar = useContext(myContext).limpiarEstado
 
 
 	const formHandler = ele => {
 		ele.preventDefault();		 				
 	}
+
+	useEffect(() => {
+		limpiar()
+	},[])
 
 	
 

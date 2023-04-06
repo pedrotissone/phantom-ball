@@ -9,8 +9,10 @@ import CuadroDeInformacion from "./componentes/CuadroDeInformacion";
 import PantallaDePreparacion from "./componentes/PantallaDePreparacion";
 import Ranking from "./componentes/Ranking";
 
-function App() {
 
+function App() { 
+
+  
   return (
     <MyContextProvider>
       <BrowserRouter>        
