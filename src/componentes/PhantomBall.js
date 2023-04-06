@@ -82,7 +82,7 @@ function PhantomBall() {
 			bottom: Math.floor(Math.random() * (window.innerHeight - 45)),
 			left: Math.floor(Math.random() * (window.innerWidth - 45)),
 			});
-		}, 1000); 	
+		}, 800); 	
 
 	setTimeout(() => {
 		clearInterval(intervalo);			
